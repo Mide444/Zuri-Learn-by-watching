@@ -1,0 +1,193 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+*{
+    box-sizing: border-box;
+}
+body{
+    min-width: 325px;
+    max-width: 1440px;
+    font-size: 16px;
+    font-family: 'Poppins', sans-serif;
+    margin: 50px 100px;
+    justify-content: center;
+    background-image: url('./bg-intro-desktop.png' );
+    background-size: cover;
+    background-color: hsl(0, 100%, 74%);   
+}
+main{
+    padding: 70px 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+.signup-msg, .signup-block{ padding: 25px; }
+.signup-msg{
+    margin-top: 70px;
+    padding-left: 50px;
+
+    color: hsl(0, 0%, 100%);
+}
+.title{
+    font-weight: 700;
+    font-size: 40px;
+    padding-right: 50px;
+}
+.text{
+    font-weight: 700;
+    padding-right: 40px;
+    line-height: 20px;
+}
+.trial{
+    background: hsl(248, 32%, 49%);
+    text-align: center;
+    padding: 15px 30px;
+    border-radius: 8px;
+    align-items: center;
+    color: hsl(0, 0%, 100%);
+    font-weight: 400;
+    font-size: 16px;
+    box-shadow: -2px 3px 5px rgb(78, 74, 74);
+}
+form{
+    display: grid;
+    grid-template-columns: 1fr;
+    padding: 30px;
+    border-radius: 8px;
+    background-color: hsl(0, 0%, 100%);
+    box-shadow: 0 5px 5px 0 hsl(246, 25%, 77%);
+}
+input, button{
+    height: 40px;
+    border-radius: 5px;
+    padding-left: 20px;
+    margin-bottom: 10px;
+    border: 1px solid hsl(246, 25%, 77%);
+}
+input{
+    color: hsl(148, 10%, 26%);
+    position: relative;
+    width: 100%;
+    margin-bottom: 5px;
+}
+.form-input{
+    color: hsl(148, 10%, 26%);
+    outline: none;
+}
+.form-input:focus{ border-color:hsl(154, 59%, 51%);}
+.form-input:focus:invalid{ 
+    border-color: hsl(0, 100%, 74%);
+}
+img{
+    position: relative;
+    left: 90%;
+    bottom: 12%;
+    visibility: collapse;
+}
+.form-input:focus:invalid + img{
+    color: hsl(0, 100%, 74%);
+    visibility: visible;
+}
+.error{
+    color: hsl(0, 100%, 74%); 
+    position: relative;  
+    margin-top: 10px;
+    left: 60%;
+    /* display: none; */
+    top: -10px;
+    font-size: 12px;
+    visibility: collapse;
+}
+.form-input:focus:invalid + .error{
+    display: inline;
+    color: hsl(0, 100%, 74%);
+    float: right;
+    font-size: 14px;
+}
+button{
+    background-color: hsl(154, 59%, 51%);
+    color: #ffffff;
+    font-weight: 500;
+}
+button:hover{
+    transform: scale(1.02);
+}
+.red{
+    color: hsl(0, 100%, 74%) ;
+}
+form p{
+    color: hsl(246, 25%, 77%);
+    font-size: 12px;
+    text-align: center;
+}
+input::placeholder{
+    font-weight: 700;
+}
+
+@media only screen and (max-width:425px){
+    body{
+        font-size: 16px;
+        margin: 5px;
+        font-family: 'Poppins', sans-serif;
+        justify-content: center;
+        background-image: url('./bg-intro-mobile.png' );
+        padding: 5px;
+        background-size: cover;
+        background-color: hsl(0, 100%, 74%);
+    }
+    main{
+        justify-content: center;
+        grid-template-columns: 1fr;
+        margin: 0;
+        padding: 20px 10px;
+    }
+    .signup-msg, .signup-block{
+        padding: 2px;
+    }
+    .signup-msg{
+        margin-top: 5px;
+        text-align: center;
+        color: hsl(0, 0%, 100%);
+    }
+    .title{
+        font-weight: 700;
+        padding: 0;
+        font-size: 25px;
+    }
+    .text{
+        line-height: 10px;
+        padding-right: 0;
+    }
+}
+
+@media only screen and (max-width:880px){
+    body{
+        font-size: 16px;
+        margin: 5px;
+        justify-content: center;
+        background-image: url('./bg-intro-mobile.png' );
+        padding: 5px;
+    }
+    main{
+        justify-content: center;
+        grid-template-columns: 1fr;
+        margin: 0;
+        padding: 30px;
+    }
+    /* .signup-msg, .signup-block{
+        padding: 2px;
+    } */
+    .signup-msg{
+        margin: 5px 0 10px 0;
+        text-align: center;
+        color: hsl(0, 0%, 100%);
+    }
+    .title{
+        padding: 0;
+        font-size: 25px;
+    }
+    .text{
+        line-height: 20px;
+    }
+    .trial{
+        padding: 20px 30px;
+        margin-bottom: 20px;
+    }
